@@ -1,0 +1,26 @@
+# Directories to ignore
+**/bin/
+**/obj/
+**/.vs/
+**/.git/
+**/node_modules/
+**/TestResults/
+**/publish/
+
+# File types to ignore
+**/*.user
+**/*.suo
+**/*.lock
+**/*.db
+**/*.sqlite
+**/*.log
+**/appsettings.Development.json
+
+# Docker-specific files
+**/Dockerfile*
+**/docker-compose*
+**/.dockerignore
+
+# IDE specific files
+**/.vscode/
+**/.idea/
