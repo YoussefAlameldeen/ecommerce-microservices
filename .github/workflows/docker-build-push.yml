@@ -27,5 +27,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner|lower }}/ecommerce-microservices:latest
-            ghcr.io/${{ github.repository_owner|lower }}/ecommerce-microservices:${{ github.sha }}
+            ghcr.io/${{ format('{0}/{1}', github.repository_owner, 'ecommerce-microservices') }}:latest
+            ghcr.io/${{ format('{0}/{1}', github.repository_owner, 'ecommerce-microservices') }}:${{ github.sha }}
