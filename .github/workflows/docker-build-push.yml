@@ -18,12 +18,14 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
+          context: .
           push: true
-          repository: ${{ github.repository_owner }}/eccomerce-microservice
-          tags: ${{ github.sha }}
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/ecommerce-microservice:latest
+            ghcr.io/${{ github.repository_owner }}/ecommerce-microservice:${{ github.sha }}
