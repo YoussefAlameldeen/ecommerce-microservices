@@ -6,7 +6,7 @@ on:
 
 jobs:
   build_and_push:
-    runs-on: windows-latest # Change this to a Windows runner
+    runs-on: ubuntu-latest # Use a Linux runner
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
