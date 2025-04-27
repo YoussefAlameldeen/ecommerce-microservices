@@ -27,6 +27,6 @@ jobs:
           context: .
           push: true
           repository: ghcr.io/${{ github.repository }}
-          tags:
+          tags: |
             - latest
             - ${{ github.sha }}
