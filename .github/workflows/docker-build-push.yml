@@ -25,6 +25,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          registry: ghcr.io
           repository: ${{ github.repository_owner }}/eccomerce-microservice
           tags: ${{ github.sha }}
